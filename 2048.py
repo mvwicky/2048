@@ -130,22 +130,22 @@ def main():
 				if event.code is sf.Keyboard.SPACE:
 					initialFilled=reSeed()
 					curFilled=initialFilled
-					print "Re-Seeded",initialFilled	
+					print ("Re-Seeded",initialFilled)	
 				if event.code is sf.Keyboard.RETURN:
 					if len(curFilled)>=16:
-						print "Spaces Full"
+						print ("Spaces Full")
 					else:
 						curFilled.append(newBlock(curFilled))
 						curFilled.sort()
-						print "Block Added"	
+						print ("Block Added")
 				
-				print curFilled
+				print(curFilled)
 
 		for i in range(16):
 			if curFilled.count(i)>1:
 					curFilled.remove(i)
 					if len(curFilled)>=16:
-						print "Spaces Full"
+						print ("Spaces Full")
 					else:
 						curFilled.append(newBlock(curFilled))
 					#filledBlocks[curFilled.index(i)].fill_color=colorValues[4]
